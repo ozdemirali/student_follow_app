@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:student_follow_app/widgets/inputText.dart';
 
 class Login extends StatefulWidget{
   @override
@@ -11,6 +11,8 @@ class Login extends StatefulWidget{
 
 class LoginState extends State<Login>  {
   final _formKey=GlobalKey<FormState>();
+  TextEditingController txtUserName=new TextEditingController();
+  TextEditingController txtPassword=new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,19 +33,21 @@ class LoginState extends State<Login>  {
         child: new ListView(
           shrinkWrap: true,
           children: [
-            logo(),
-            Text("Giriş"),
+            showlogo(),
+            showEmail(),
+            showPassword(),
+            showLogin(),
           ],
         ),
       ),
     );
   }
 
-  Widget logo(){
+  Widget showlogo(){
     return Hero(
-        tag: "Lgo", 
+        tag: "Logo",
         child:Padding(
-         padding: EdgeInsets.fromLTRB(60, 0, 50, 50), 
+         padding: EdgeInsets.fromLTRB(60, 10, 50, 50),
          child: CircleAvatar(
            backgroundColor: Colors.transparent,
            radius: 60,
@@ -51,5 +55,35 @@ class LoginState extends State<Login>  {
          ), 
         ));
   }
-  
+
+  Widget showEmail(){
+    return new Padding(
+        padding: EdgeInsets.fromLTRB(0.0, 100, 0.0, 0.0),
+        child:inputText(txtUserName,true,false,TextInputType.emailAddress,"Email Adresiniz") ,
+    );
+  }
+
+  Widget showPassword(){
+    return new Padding(
+      padding: EdgeInsets.fromLTRB(0.0, 10, 0.0, 0.0),
+      child:inputText(txtPassword,true,true,TextInputType.visiblePassword,"Şifreniz") ,
+    );
+  }
+
+  Widget showLogin(){
+    return Padding(
+      padding: EdgeInsets.fromLTRB(0.0, 45.0, 0.0, 0.0),
+      child: ElevatedButton(
+          style:  ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20)),
+          child: Text("Giriş"),
+          onPressed: () {
+            if(_formKey.currentState!.validate()){
+              //submit();
+              print("Tıklandı");
+            }
+          }
+      ),
+    );
+  }
+
 }
