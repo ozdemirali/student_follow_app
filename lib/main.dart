@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_follow_app/screens/home.dart';
 import 'package:student_follow_app/screens/login.dart';
 
 void main() {
@@ -13,9 +14,9 @@ class MyApp extends StatelessWidget {
       title: 'Öğrenci Takip Programı',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
+        primarySwatch: Colors.blue,
       ),
-      home:Login(),
+      home:Home(),
     );
   }
 }
