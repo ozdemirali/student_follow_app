@@ -3,6 +3,9 @@ import 'package:student_follow_app/widgets/listStudent.dart';
 import 'package:student_follow_app/widgets/setting.dart';
 
 class Home extends StatefulWidget{
+  Home({required this.logoutCallBack});
+
+  final VoidCallback logoutCallBack;
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -48,6 +51,7 @@ void dispose(){
               primary: Colors.white
             ),
               onPressed: (){
+               widget.logoutCallBack();
                 print("Çıkış");
               },
               child: Text("Çıkış")),
