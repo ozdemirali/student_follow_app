@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:student_follow_app/widgets/listSetting.dart';
 import 'package:student_follow_app/widgets/listStudent.dart';
-import 'package:student_follow_app/widgets/setting.dart';
 
 class Home extends StatefulWidget{
   Home({required this.logoutCallBack});
@@ -61,7 +61,7 @@ void dispose(){
         controller: _tabController,
         children: [
           ListStudent(),
-          Setting()
+          ListSetting()
         ],
       ),
     );

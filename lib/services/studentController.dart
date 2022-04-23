@@ -40,4 +40,6 @@ class StudentController{
       throw Exception(error);
     }
   }
+
+
 }

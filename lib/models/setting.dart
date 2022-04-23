@@ -12,7 +12,7 @@ class Setting{
   final bool cameFromAbroad;
   final bool scholarship;
   final bool scheck;
-  final bool isDeleted;
+  final bool applied;
 
   Setting({
     required this.userName,
@@ -28,7 +28,7 @@ class Setting{
     required this.cameFromAbroad,
     required this.scholarship,
     required this.scheck,
-    required this.isDeleted,
+    required this.applied,
 });
 
   factory Setting.fromJson(Map<String,dynamic>json){
@@ -46,7 +46,7 @@ class Setting{
         cameFromAbroad: json["CameFromAbroad"],
         scholarship: json["Scholarship"],
         scheck: json["Scheck"],
-        isDeleted: json["IsDeleted"]
+        applied: json["Applied"]
     );
   }
 
@@ -65,7 +65,7 @@ class Setting{
       "CameFromAbroad": cameFromAbroad,
       "Scholarship": scholarship,
       "Scheck": scheck,
-      "IsDeleted": isDeleted
+      "Applied": applied
     };
   }
 

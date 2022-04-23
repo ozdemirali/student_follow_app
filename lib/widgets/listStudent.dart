@@ -30,7 +30,7 @@ class ListStudentState extends State<ListStudent> {
         future: students,
         builder: (context,snapshot){
           if(snapshot.hasData){
-            print(snapshot.data!.length);
+            //print(snapshot.data!.length);
             return   ListView.builder(
                 shrinkWrap: true,
                 itemCount: snapshot.data!.length,
