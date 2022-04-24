@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_follow_app/dialog/showToInformation.dart';
 import 'package:student_follow_app/models/student.dart';
 import 'package:student_follow_app/services/studentController.dart';
 
@@ -49,7 +50,7 @@ class ListStudentState extends State<ListStudent> {
                                       snapshot.data![position].phone
                       ),
                       onTap: (){
-                        print("Seçildi");
+                        showToInformation(context,snapshot.data![position]);
                       },
                     ),
                   );
