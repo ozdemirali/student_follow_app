@@ -6,7 +6,7 @@ A new Flutter application.
   - http: ^0.13.3
 
 ## Getting Started
-This project is a starting point for a Flutter application.
+This project is for displaying student information.
 
 ## Login Screen
  ![Login](https://user-images.githubusercontent.com/20681737/164995468-6a9256bd-6525-4007-b54b-9bcd8ed59cab.png)
