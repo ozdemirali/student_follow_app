@@ -4,9 +4,6 @@ import 'package:student_follow_app/models/student.dart';
 
 showToInformation(BuildContext context,Student student){
 
-print(student);
-
-
   Widget okButton=Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
